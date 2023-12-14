@@ -13,8 +13,8 @@ import javax.swing.JOptionPane;
 public class Ej1 {
 
     public static void main(String[] args) {
-      JOptionPane.showMessageDialog(null, arrayPalabras());
-        
+      //JOptionPane.showMessageDialog(null, arrayPalabras());
+       mostrarPalabras(arrayPalabras());
     }
 
     public static int palabrasLeidas() {
@@ -49,7 +49,7 @@ public class Ej1 {
         
        for (int i = 0; i < palabras.length; i++) {
        
-       System.out.println("Introduce una de las palabras a rellenar");
+       System.out.println("Introduce una de las palabras a rellenar:");
        palabras[i]= teclado.nextLine();
                 
         }
@@ -57,6 +57,20 @@ public class Ej1 {
        return palabras;
     }
     
+     public static void mostrarPalabras(String[] palabras){
+     
+         String aux = "";
+         
+         for (int i = 0; i <palabras.length; i++) {
+             
+             aux+=palabras[i]+"\n";
+         
+        
+         }
+         
+         JOptionPane.showMessageDialog(null, aux);
+    }
+     
     
    
 }
