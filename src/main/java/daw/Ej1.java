@@ -3,6 +3,7 @@
  */
 package daw;
 
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,7 +13,8 @@ import javax.swing.JOptionPane;
 public class Ej1 {
 
     public static void main(String[] args) {
-        System.out.println(palabrasLeidas());
+      JOptionPane.showMessageDialog(null, arrayPalabras());
+        
     }
 
     public static int palabrasLeidas() {
@@ -38,5 +40,23 @@ public class Ej1 {
 
         return numeroPal;
     }
-
+    
+    public static String[] arrayPalabras(){
+      Scanner teclado = new Scanner(System.in);
+        
+       String palabras[];
+       palabras= new String [palabrasLeidas()]; 
+        
+       for (int i = 0; i < palabras.length; i++) {
+       
+       System.out.println("Introduce una de las palabras a rellenar");
+       palabras[i]= teclado.nextLine();
+                
+        }
+ 
+       return palabras;
+    }
+    
+    
+   
 }
