@@ -58,17 +58,22 @@ public class Ej1 {
     }
     
      public static void mostrarPalabras(String[] palabras){
-     
-         String aux = "";
+  
+
+          StringBuilder mensaje = new StringBuilder();
          
          for (int i = 0; i <palabras.length; i++) {
              
-             aux+=palabras[i]+"\n";
-         
-        
+          
+                  
+             mensaje.append("Posición ").append(i)
+                     .append(" - Palabra: ")
+                     .append(palabras[i])
+                     .append("\n");
+             
          }
          
-         JOptionPane.showMessageDialog(null, aux);
+         JOptionPane.showMessageDialog(null,mensaje.toString());
     }
      
     
